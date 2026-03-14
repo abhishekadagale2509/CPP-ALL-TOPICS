@@ -1,0 +1,462 @@
+1. Hello World Program
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+2. Addition of Two Numbers
+import java.util.Scanner;
+
+public class Addition {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, sum;
+        System.out.print("Enter two numbers: ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+
+        sum = a + b;
+        System.out.println("Sum = " + sum);
+    }
+}
+3. Swap Two Numbers
+import java.util.Scanner;
+
+public class SwapNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, temp;
+
+        System.out.print("Enter two numbers: ");
+        a = sc.nextInt();
+        b = sc.nextInt();
+
+        temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swap: " + a + " " + b);
+    }
+}
+4. Check Even or Odd
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        System.out.print("Enter number: ");
+        num = sc.nextInt();
+
+        if (num % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+5. Divisible by 5 and 7
+import java.util.Scanner;
+
+public class Divisible {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        System.out.print("Enter number: ");
+        num = sc.nextInt();
+
+        if (num % 5 == 0 && num % 7 == 0)
+            System.out.println("Divisible by 5 and 7");
+        else
+            System.out.println("Not divisible");
+    }
+}
+6. Income Tax Calculation
+import java.util.Scanner;
+
+public class IncomeTax {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double salary, tax;
+
+        System.out.print("Enter annual salary: ");
+        salary = sc.nextDouble();
+
+        if (salary < 150000)
+            tax = 0;
+        else if (salary <= 300000)
+            tax = salary * 0.20;
+        else
+            tax = salary * 0.30;
+
+        System.out.println("Tax = " + tax);
+    }
+}
+7. Vowel or Consonant
+import java.util.Scanner;
+
+public class VowelCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        char ch;
+        System.out.print("Enter character: ");
+        ch = sc.next().charAt(0);
+
+        if (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+            System.out.println("Vowel");
+        else
+            System.out.println("Consonant");
+    }
+}
+8. Valid Triangle
+import java.util.Scanner;
+
+public class Triangle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a,b,c;
+
+        System.out.print("Enter three angles: ");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+
+        if(a+b+c==180)
+            System.out.println("Valid Triangle");
+        else
+            System.out.println("Invalid Triangle");
+    }
+}
+9. Factorial Program
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n,fact=1;
+
+        System.out.print("Enter number: ");
+        n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+            fact=fact*i;
+
+        System.out.println("Factorial = "+fact);
+    }
+}
+10. Power (m^n)
+import java.util.Scanner;
+
+public class Power {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int m,n,result=1;
+
+        System.out.print("Enter m and n: ");
+        m=sc.nextInt();
+        n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+            result=result*m;
+
+        System.out.println("Result = "+result);
+    }
+}
+11. Prime Number Check
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num,flag=0;
+
+        System.out.print("Enter number: ");
+        num=sc.nextInt();
+
+        for(int i=2;i<num;i++)
+        {
+            if(num%i==0)
+            {
+                flag=1;
+                break;
+            }
+        }
+
+        if(flag==0)
+            System.out.println("Prime");
+        else
+            System.out.println("Not Prime");
+    }
+}
+12. Sum of Series (1+2+...+n)
+import java.util.Scanner;
+
+public class SumSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n,sum=0;
+
+        System.out.print("Enter n: ");
+        n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+            sum=sum+i;
+
+        System.out.println("Sum = "+sum);
+    }
+}
+13. Palindrome Number
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num,rev=0,d,temp;
+
+        System.out.print("Enter number: ");
+        num=sc.nextInt();
+
+        temp=num;
+
+        while(num!=0)
+        {
+            d=num%10;
+            rev=rev*10+d;
+            num=num/10;
+        }
+
+        if(temp==rev)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+14. Sum of Even and Odd Numbers (1 to n)
+import java.util.Scanner;
+
+public class EvenOddSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n,even=0,odd=0;
+
+        System.out.print("Enter n: ");
+        n=sc.nextInt();
+
+        for(int i=1;i<=n;i++)
+        {
+            if(i%2==0)
+                even+=i;
+            else
+                odd+=i;
+        }
+
+        System.out.println("Even Sum = "+even);
+        System.out.println("Odd Sum = "+odd);
+    }
+}
+15. Reverse a Number
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num,rev=0,d;
+
+        System.out.print("Enter number: ");
+        num=sc.nextInt();
+
+        while(num!=0)
+        {
+            d=num%10;
+            rev=rev*10+d;
+            num=num/10;
+        }
+
+        System.out.println("Reverse = "+rev);
+    }
+}
+16. Prime Numbers from 1 to n
+import java.util.Scanner;
+
+public class PrimeRange {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n;
+
+        System.out.print("Enter n: ");
+        n=sc.nextInt();
+
+        for(int i=2;i<=n;i++)
+        {
+            int flag=0;
+
+            for(int j=2;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                    flag=1;
+                    break;
+                }
+            }
+
+            if(flag==0)
+                System.out.print(i+" ");
+        }
+    }
+}
+17. Armstrong Number
+import java.util.Scanner;
+
+public class Armstrong {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num,sum=0,d,temp;
+
+        System.out.print("Enter number: ");
+        num=sc.nextInt();
+
+        temp=num;
+
+        while(num!=0)
+        {
+            d=num%10;
+            sum=sum+(d*d*d);
+            num=num/10;
+        }
+
+        if(temp==sum)
+            System.out.println("Armstrong");
+        else
+            System.out.println("Not Armstrong");
+    }
+}
+18. Greatest of Three Numbers
+import java.util.Scanner;
+
+public class Greatest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a,b,c;
+
+        System.out.print("Enter three numbers: ");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+
+        if(a>b)
+        {
+            if(a>c)
+                System.out.println("Greatest = "+a);
+            else
+                System.out.println("Greatest = "+c);
+        }
+        else
+        {
+            if(b>c)
+                System.out.println("Greatest = "+b);
+            else
+                System.out.println("Greatest = "+c);
+        }
+    }
+}
+19. Pizza Shop Menu Program
+import java.util.Scanner;
+
+public class PizzaShop {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int choice,qty,total=0;
+
+        System.out.println("1.Margherita 200");
+        System.out.println("2.Farmhouse 250");
+        System.out.println("3.Pepperoni 300");
+
+        System.out.print("Enter choice: ");
+        choice=sc.nextInt();
+
+        System.out.print("Enter quantity: ");
+        qty=sc.nextInt();
+
+        switch(choice)
+        {
+            case 1: total=200*qty; break;
+            case 2: total=250*qty; break;
+            case 3: total=300*qty; break;
+            default: System.out.println("Invalid choice");
+        }
+
+        System.out.println("Total Bill = "+total);
+    }
+}
+20. Digit to Word
+import java.util.Scanner;
+
+public class DigitWord {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n;
+
+        System.out.print("Enter digit: ");
+        n=sc.nextInt();
+
+        switch(n)
+        {
+            case 0: System.out.println("Zero"); break;
+            case 1: System.out.println("One"); break;
+            case 2: System.out.println("Two"); break;
+            case 3: System.out.println("Three"); break;
+            case 4: System.out.println("Four"); break;
+            case 5: System.out.println("Five"); break;
+            case 6: System.out.println("Six"); break;
+            case 7: System.out.println("Seven"); break;
+            case 8: System.out.println("Eight"); break;
+            case 9: System.out.println("Nine"); break;
+            default: System.out.println("Invalid");
+        }
+    }
+}
+21. Simple Calculator
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a,b;
+        char op;
+
+        System.out.print("Enter two numbers: ");
+        a=sc.nextInt();
+        b=sc.nextInt();
+
+        System.out.print("Enter operator (+ - * /): ");
+        op=sc.next().charAt(0);
+
+        switch(op)
+        {
+            case '+': System.out.println(a+b); break;
+            case '-': System.out.println(a-b); break;
+            case '*': System.out.println(a*b); break;
+            case '/': System.out.println(a/b); break;
+            default: System.out.println("Invalid Operator");
+        }
+    }
+}
